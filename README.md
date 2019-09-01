@@ -1,2 +1,2 @@
 # Azurerm_Kubernetes_Cluster
-Gerencia uma instância de serviço de contêiner do Azure
+Gerencia um cluster de Kubernetes gerenciado (também conhecido como Serviço de Kubernetes do AKS / Azure)
