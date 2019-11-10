@@ -1,1 +1,9 @@
-az group create --name myResourceGroup --location eastus
+az group create --n myResourceGroup --l eastus
+
+-n = nome do grupo de recursos
+--------------------------------------------------------
+-l = location 
+az account list-locations = Você lista as localizações 
+
+Lista com todos os comados de az group:
+[Click aqui](https://docs.microsoft.com/pt-br/cli/azure/group?view=azure-cli-latest#az-group-create)
