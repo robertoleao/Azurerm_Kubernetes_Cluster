@@ -33,13 +33,14 @@ Use o comando az aks create para criar um cluster do AKS. O exemplo a seguir cri
 Ao criar um cluster do AKS, um segundo grupo de recursos é criado automaticamente para armazenar os recursos do AKS.
 
 > Por que são criados dois grupos de recursos com o AKS?
-O AKS baseia-se em vários recursos de infraestrutura do Azure, incluindo conjuntos de dimensionamento de máquinas virtuais, redes virtuais e Managed disks. Isso permite que você aproveite muitos dos principais recursos da plataforma Azure no ambiente kubernetes gerenciado fornecido pelo AKS. Por exemplo, a maioria dos tipos de máquina virtual do Azure pode ser usada diretamente com AKS e as reservas do Azure podem ser usadas para receber descontos nesses recursos automaticamente.
 
-Para habilitar essa arquitetura, cada implantação AKS abrange dois grupos de recursos:
+> O AKS baseia-se em vários recursos de infraestrutura do Azure, incluindo conjuntos de dimensionamento de máquinas virtuais, redes virtuais e Managed disks. Isso permite que você aproveite muitos dos principais recursos da plataforma Azure no ambiente kubernetes gerenciado fornecido pelo AKS. Por exemplo, a maioria dos tipos de máquina virtual do Azure pode ser usada diretamente com AKS e as reservas do Azure podem ser usadas para receber descontos nesses recursos automaticamente.
 
-- Você cria o primeiro grupo de recursos. Esse grupo contém apenas o recurso de serviço kubernetes. O provedor de recursos AKS cria automaticamente o segundo grupo de recursos durante a implantação. Um exemplo do segundo grupo de recursos é MC_myResourceGroup_myAKSCluster_eastus. Para obter informações sobre como especificar o nome desse segundo grupo de recursos, consulte a próxima seção.
+> Para habilitar essa arquitetura, cada implantação AKS abrange dois grupos de recursos:
 
-- O segundo grupo de recursos, conhecido como grupo de recursos de nó, contém todos os recursos de infraestrutura associados ao cluster. Esses recursos incluem as máquinas virtuais do nó do Kubernetes, rede virtual e armazenamento. Por padrão, o grupo de recursos de nó tem um nome como MC_myResourceGroup_myAKSCluster_eastus. O AKS exclui automaticamente o recurso de nó sempre que o cluster é excluído, portanto, ele só deve ser usado para recursos que compartilham o ciclo de vida do cluster.
+> - Você cria o primeiro grupo de recursos. Esse grupo contém apenas o recurso de serviço kubernetes. O provedor de recursos AKS cria automaticamente o segundo grupo de recursos durante a implantação. Um exemplo do segundo grupo de recursos é MC_myResourceGroup_myAKSCluster_eastus. Para obter informações sobre como especificar o nome desse segundo grupo de recursos, consulte a próxima seção.
+
+> - O segundo grupo de recursos, conhecido como grupo de recursos de nó, contém todos os recursos de infraestrutura associados ao cluster. Esses recursos incluem as máquinas virtuais do nó do Kubernetes, rede virtual e armazenamento. Por padrão, o grupo de recursos de nó tem um nome como MC_myResourceGroup_myAKSCluster_eastus. O AKS exclui automaticamente o recurso de nó sempre que o cluster é excluído, portanto, ele só deve ser usado para recursos que compartilham o ciclo de vida do cluster.
 
 ```powershell
 az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 1 --enable-addons monitoring --generate-ssh-keys
