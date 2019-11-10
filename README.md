@@ -22,6 +22,8 @@ O exemplo a seguir cria um grupo de recursos chamado myResourceGroup no local ea
 az group create --name myResourceGroup --location eastus
 
 ```
+> [Comando comentado](https://github.com/robertoleao/Azurerm_Kubernetes_Cluster/blob/master/az%20group%20create)
+
 A seguinte saída de exemplo mostra o grupo de recursos criado com êxito:
 
 ##### Imagem colocar
