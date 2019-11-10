@@ -34,25 +34,41 @@ Use o comando az aks create para criar um cluster do AKS. O exemplo a seguir cri
 ```powershell
 az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 1 --enable-addons monitoring --generate-ssh-keys
 ```
+> [Comando comentado](https://github.com/robertoleao/Azurerm_Kubernetes_Cluster/blob/master/az%20aks%20create)
+
 Após alguns minutos, o comando será concluído e retornará informações no formato JSON sobre o cluster.
 
 ##### Imagem colocar
 
 Conectar-se ao cluster
 Para gerenciar um cluster do Kubernetes, use kubectl, o cliente de linha de comando do Kubernetes. Se você usar o Azure Cloud Shell, o kubectl já estará instalado. Para instalar o kubectl localmente, use o comando az aks install-cli:
+
 ```
 az aks install-cli
 ```
+
+> [Comando comentado](https://github.com/robertoleao/Azurerm_Kubernetes_Cluster/blob/master/az%20aks%20install-cli)
+
 Para configurar o kubectl para se conectar ao cluster do Kubernetes, use o comando az aks get-credentials. Este comando baixa as credenciais e configura a CLI do Kubernetes para usá-las.
+
 ```
 az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
 ```
+
+> [Comando comentado](https://github.com/robertoleao/Azurerm_Kubernetes_Cluster/blob/master/az%20aks%20get-credentials)
+
 Para verificar a conexão ao seu cluster, use o comando kubectl get para retornar uma lista de nós do cluster.
+
 ```
 kubectl get nodes
 ```
+
+> [Comando comentado](https://github.com/robertoleao/Azurerm_Kubernetes_Cluster/blob/master/kubectl%20get)
+
 A saída de exemplo a seguir mostra o único nó criado nas etapas anteriores. Verifique se o status do nó é Pronto:
 
 ##### Imagem colocar
+
+
 
 ### Executar o aplicativo
