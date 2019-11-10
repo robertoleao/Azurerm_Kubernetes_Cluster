@@ -1,1 +1,4 @@
 az aks install-cli
+
+Lista com todos os comados de az aks:
+https://docs.microsoft.com/pt-br/cli/azure/aks?view=azure-cli-latest#az-aks-install-cli
