@@ -1,7 +1,7 @@
 # Azurerm_Kubernetes_Cluster
 #### Gerencia um cluster de Kubernetes gerenciado (também conhecido como Serviço de Kubernetes do AKS / Azure)
 
-Você implanta um cluster do AKS (Serviço de Kubernetes do Azure) usando a CLI do Azure. O AKS é um serviço de Kubernetes gerenciado que permite implantar e gerenciar clusters rapidamente. Um aplicativo de vários contêineres que inclui um front-end da Web e uma instância do Redis é executado no cluster. Em seguida, você verá como monitorar a integridade do cluster e dos pods que executam seu aplicativo.
+Você implantara um cluster do AKS (Serviço de Kubernetes do Azure) usando a CLI do Azure. O AKS é um serviço de Kubernetes gerenciado que permite implantar e gerenciar clusters rapidamente. Um aplicativo de vários contêineres que inclui um front-end da Web e uma instância do Redis é executado no cluster. Em seguida, você verá como monitorar a integridade do cluster e dos pods que executam seu aplicativo.
 
 O Azure hospeda o Azure Cloud Shell, um ambiente de shell interativo que pode ser usado por meio do navegador. O Cloud Shell permite usar bash ou PowerShell para trabalhar com serviços do Azure. É possível usar os comandos pré-instalados do Cloud Shell para executar o código neste artigo sem precisar instalar nada no seu ambiente local.
 
@@ -51,6 +51,8 @@ Após alguns minutos, o comando será concluído e retornará informações no f
 
 ##### Imagem colocar
 
+Essa etapa e para Instalar o kubectl localmente
+
 Conectar-se ao cluster
 Para gerenciar um cluster do Kubernetes, use kubectl, o cliente de linha de comando do Kubernetes. Se você usar o Azure Cloud Shell, o kubectl já estará instalado. Para instalar o kubectl localmente, use o comando az aks install-cli:
 
@@ -83,3 +85,7 @@ A saída de exemplo a seguir mostra o único nó criado nas etapas anteriores. V
 
 
 ### Executar o aplicativo
+
+
+
+
